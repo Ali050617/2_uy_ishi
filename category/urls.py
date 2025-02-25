@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('category/', views.CategoryListCreateView.as_view(), name='list'),
-    path('category/<int:pk>/', views.CategoryDetailView.as_view(), name='detail')
+    path('category/<slug:category_slug>/posts/', views.CategoryDetailView.as_view(), name='detail')
 ]

@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('posts/<int:post_id>/comments/', views.CommentListCreateView.as_view(), name='comment_list'),
+    path('posts/<slug:post_slug>/comments/', views.CommentListCreateView.as_view(), name='comment_list'),
 ]
