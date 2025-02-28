@@ -38,4 +38,3 @@ class PostDetailView(APIView):
         post = get_object_or_404(Post, pk=pk)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-

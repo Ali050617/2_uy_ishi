@@ -18,3 +18,6 @@ class Post(BaseModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='posts', blank=True)
     tags = models.ManyToManyField(Tag, related_name='posts', blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
+
+    def __str__(self):
+        return self.title
